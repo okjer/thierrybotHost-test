@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Site en maintenance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F7F7F7;
+            text-align: center;
+            padding: 100px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666666;
+            margin-bottom: 40px;
+        }
+
+        .countdown {
+            font-size: 24px;
+            color: #333333;
+            margin-bottom: 40px;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        // Compte à rebours (en secondes) pour la remise en ligne automatique
+        var countdownSeconds = 3600; // 1 heure (ajustez la durée en fonction de vos besoins)
+
+        // Fonction pour mettre à jour le compte à rebours
+        function updateCountdown() {
+            var countdownElement = document.getElementById('countdown');
+            var countdownSeconds = 10 * 86400; // 10 jours = 10 * 86400 secondes
+            var days, hours, minutes, seconds;
+
+            function formatTime(time) {
+                return time < 10 ? '0' + time : time;
+            }
+
+            function updateTimer() {
+                days = Math.floor(countdownSeconds / 86400); // 1 jour = 86400 secondes
+                hours = Math.floor((countdownSeconds % 86400) / 3600);
+                minutes = Math.floor((countdownSeconds % 3600) / 60);
+                seconds = countdownSeconds % 60;
+
+                countdownElement.innerHTML = formatTime(days) + 'j ' + formatTime(hours) + 'h ' + formatTime(minutes) + 'm ' + formatTime(seconds) + 's';
+            }
+
+            updateTimer();
+
+            var countdownInterval = setInterval(function () {
+                countdownSeconds--;
+
+                if (countdownSeconds < 0) {
+                    clearInterval(countdownInterval);
+                    // Mettre ici la logique pour rétablir le site en ligne
+                    // Par exemple, rediriger vers la page d'accueil
+                    window.location.href = 'index.html';
+                } else {
+                    updateTimer();
+                }
+            }, 1000);
+        }
+
+        // Démarrer le compte à rebours au chargement de la page
+        window.onload = function() {
+            updateCountdown();
+        };
+    </script>
+</head>
+<body>
+    <img src="logo-removebg-preview.png" alt="Maintenance Image">
+    <h1>Site en maintenance</h1>
+    <p>Nous effectuons actuellement des travaux de maintenance sur notre site web.</p>
+    <p>Nous serons bientôt de retour ! Veuillez nous excuser pour la gêne occasionnée.</p>
+    <p>Votre patience est appréciée.</p>
+    <p>Temps restant avant la remise en ligne automatique : <span id="countdown" class="countdown"></span></p>
+    <p>Vous pouvez nous contacter à l'adresse suivante : <a href="mailto:contact@example.com">contact@giovaniandmamie.org</a></p>
+</body>
+</html>
