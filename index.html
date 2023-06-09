@@ -1,91 +1,399 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
-    <title>Site en maintenance</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #F7F7F7;
-            text-align: center;
-            padding: 100px;
-        }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        h1 {
-            font-size: 24px;
-            color: #333333;
-            margin-bottom: 20px;
-        }
+  <title>ThierrySante - Accueil</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-        p {
-            font-size: 18px;
-            color: #666666;
-            margin-bottom: 40px;
-        }
+  <!-- Favicons -->
+  <link href="assets/img/favicon_icon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        .countdown {
-            font-size: 24px;
-            color: #333333;
-            margin-bottom: 40px;
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-        img {
-            width: 200px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-    </style>
-    <script>
-        // Compte à rebours (en secondes) pour la remise en ligne automatique
-        var countdownSeconds = 3600; // 1 heure (ajustez la durée en fonction de vos besoins)
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        // Fonction pour mettre à jour le compte à rebours
-        function updateCountdown() {
-            var countdownElement = document.getElementById('countdown');
-            var countdownSeconds = 10 * 86400; // 10 jours = 10 * 86400 secondes
-            var days, hours, minutes, seconds;
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-            function formatTime(time) {
-                return time < 10 ? '0' + time : time;
-            }
-
-            function updateTimer() {
-                days = Math.floor(countdownSeconds / 86400); // 1 jour = 86400 secondes
-                hours = Math.floor((countdownSeconds % 86400) / 3600);
-                minutes = Math.floor((countdownSeconds % 3600) / 60);
-                seconds = countdownSeconds % 60;
-
-                countdownElement.innerHTML = formatTime(days) + 'j ' + formatTime(hours) + 'h ' + formatTime(minutes) + 'm ' + formatTime(seconds) + 's';
-            }
-
-            updateTimer();
-
-            var countdownInterval = setInterval(function () {
-                countdownSeconds--;
-
-                if (countdownSeconds < 0) {
-                    clearInterval(countdownInterval);
-                    // Mettre ici la logique pour rétablir le site en ligne
-                    // Par exemple, rediriger vers la page d'accueil
-                    window.location.href = 'index.html';
-                } else {
-                    updateTimer();
-                }
-            }, 1000);
-        }
-
-        // Démarrer le compte à rebours au chargement de la page
-        window.onload = function() {
-            updateCountdown();
-        };
-    </script>
+  <!-- =======================================================
+  * Template Name: Personal
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
+
 <body>
-    <img src="logo-removebg-preview.png" alt="Maintenance Image">
-    <h1>Site en maintenance</h1>
-    <p>Nous effectuons actuellement des travaux de maintenance sur notre site web.</p>
-    <p>Nous serons bientôt de retour ! Veuillez nous excuser pour la gêne occasionnée.</p>
-    <p>Votre patience est appréciée.</p>
-    <p>Temps restant avant la remise en ligne automatique : <span id="countdown" class="countdown"></span></p>
-    <p>Vous pouvez nous contacter à l'adresse suivante : <a href="mailto:contact@example.com">contact@giovaniandmamie.org</a></p>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <h1><a href="index.html">Thierry Sante</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+      <h2>Bienvenue sur le site <span>thierrysante.com,</span> votre assistant virtuel en sante</h2>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link active" href="#header">Accueil</a></li>
+          <li><a class="nav-link" href="#resume">Agenda</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link" href="#contact" style="display: inline-block;padding: 5px 10px;
+          background-color: #1853d27e;color: #fff;text-decoration: none;border-radius: 4px;
+          transition: background-color 0.3s;font-size: 18px;margin-top: 60;">Accéder au Chatbot</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Agenda</h2>
+        <p>Evenements</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">Journée internationale sur la drépanocytose</h3>
+          <div class="resume-item pb-0">
+            <h4>Hôpital A. Sice</h4>
+            <p><em>La drépranocytose, parlons-en #avec thierry</em></p>
+            <p>
+            <ul>
+              <li>Rôcher des âges, Pointe Noire</li>
+              <li>(242) 06 825 06 11</li>
+              <li>xyz@example.com</li>
+            </ul>
+            </p>
+          </div>
+
+          <h3 class="resume-title">Semaine de l'intelligence artificielle AI_Week CG</h3>
+          <div class="resume-item">
+            <h4>L'intelligence artificielle pour la santé</h4>
+            <h5>Septembre - 2022</h5>
+            <p><em>Hôtel Hilton, PN</em></p>
+            <p>Ateliers et formation</p>
+          </div>
+          <div class="resume-item">
+            <h4></h4>
+            <h5></h5>
+            <p><em></em></p>
+            <p></p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h3 class="resume-title"></h3>
+          <div class="resume-item">
+            <h4></h4>
+            <h5></h5>
+            <p><em> </em></p>
+            <p>
+            <ul>
+            </ul>
+            </p>
+          </div>
+          <div class="resume-item">
+            <h4></h4>
+            <h5></h5>
+            <p><em></em></p>
+            <p>
+            <ul>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Resume Section -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>Coming ...</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+            <h4><a href="">Lorem Ipsum</a></h4>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-file"></i></div>
+            <h4><a href="">Sed ut perspiciatis</a></h4>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-tachometer"></i></div>
+            <h4><a href="">Magni Dolores</a></h4>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-world"></i></div>
+            <h4><a href="">Nemo Enim</a></h4>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-slideshow"></i></div>
+            <h4><a href="">Dele cardo</a></h4>
+            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-arch"></i></div>
+            <h4><a href="">Divera don</a></h4>
+            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>Retour sur images</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">AI Week</li>
+            <li data-filter=".filter-card">Journée de la drépanocytose</li>
+            <li data-filter=".filter-web">GMU Tour</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/_aiweek_Dr_Irène.JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Dr. Irène ONDZOTTO</h4>
+              <p>AI_Week2022-OPENING</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>GMU 3</h4>
+              <p>GMU Tour</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/_thierrydemo.JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Dev Team Member</h4>
+              <p>AI_Week2022-ThierryBotDemo</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Journée de la drépanocytose 2</h4>
+              <p>Journée de la drépanocytose</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>GMU Tour 2</h4>
+              <p>GMU Tour</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/_closedguest-picture.JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Guests Picture</h4>
+              <p>AI_Week2022</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Journée de la drépanocytose 1</h4>
+              <p>Journée de la drépanocytose</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Journée de la drépanocytose 3</h4>
+              <p>Journée de la drépanocytose</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>GMU Tour 3</h4>
+              <p>GMU Tour</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Thierry</h2>
+        <p>Posez vos questions au Chatbot</p>
+      </div>
+
+      <form action="/predict/" method="post" role="form" class="php-email-form mt-4">
+        <div class="form-group mt-3">
+          <form action="/predict/" method="POST" id="message-form">
+            <input type="text" id="message-input" placeholder="Entrez votre message" required>
+          </form>
+        </div>
+        <div class="text-center"><button type="submit" id="send-button">Envoyer</button></div>
+      </form>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+  <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+    Credits@<a href="https://bootstrapmade.com/">BootstrapMade</a>
+  </div>
+  <footer>
+    <div class="container">
+        <p style="opacity: 0.30; text-align: left;">&copy; 2023 ThierrySante. version beta
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
